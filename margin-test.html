@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+<title>斯芬克斯之谜续——无效的margin-left/right(ie)</title>
+<style>
+.wrap{
+  border:10px solid #666;
+	background:#F0F0F0; 
+	display: inline-block;
+	}
+.wrap{
+	display: block;
+	}	
+.cont{
+	border-bottom:2px solid #03F;
+	margin:0 30px;
+	height:30px;
+	}
+	
+.wrap2{
+	border:10px solid #666;
+	border-color: #666 #69F #69F #666;
+	background:#F0F0F0; 
+	position: relative;
+	height: 100px;
+	padding: 20px;
+	}
+.cont2{
+	border:5px solid #03F;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	}	
+.outer-wrap{
+	border:10px solid #F96;
+	border-color: #333 #369 #369 #333;
+	background:#F0F0F0;
+	width: 700px;
+}	
+</style>
+</head>
+<body>
+
+http://127.0.0.1:8000/ie-margin-left.html
+<br/>
+<br/>
+
+<button onclick="alert(wrap.currentStyle.hasLayout)">Does wrap hasLayout?</button>
+<br/>
+<br/>
+
+<div class="outer-wrap">
+	<div id="wrap" class="wrap2">
+		<div class="cont2">热门圈子</div>
+	</div>
+</div>
+
+</body>
+</html>
